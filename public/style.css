@@ -1,0 +1,44 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+h1, h2, p, input, button, textarea {
+    padding: 5px;
+    margin: 5px;
+}
+
+input {
+    width: 47%;
+}
+
+textarea {
+    width: 97%;
+}
+
+.center {
+    text-align: center;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+#loader {
+    position: absolute;
+    top: 250px;
+    left: 175px;
+    display: none;
+}

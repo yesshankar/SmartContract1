@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Notary</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="center">Star Notary Service</h1>
+        </header>
+        <div>
+            <p>Connetion Status:</p>
+            <span id="connectionStatus" class="red"> &#9746; Not conected</span>
+        </div>
+        <div>
+            <p>Put the Star information below (all required)</p>
+            <form id="claim-form" onsubmit="claimButtonClicked()">
+                <input id="name" type="text" placeholder="Enter Name" required/>
+                <input id="ra" type="text" placeholder="Enter ra" required/>
+                <input id="dec" type="text" placeholder="Enter dec" required/>
+                <input id="mag" type="text" placeholder="Enter mag" required/>
+                <input id="tokenId" type="number" min="1" placeholder="Enter tokenId" required/>
+                <textarea id="starStory" rows="4" cols="50" maxlength="250" placeholder="Enter Star Story" required></textarea>
+                <button id="claimStar" type="submit">Claim Star</button>
+                <span id="claimStatus"></span>
+            </form>
+            <div id="loader"><img src="thinking.gif" /></div>
+        </div>
+        <div>
+            <h2>Lookup Star</h2>
+            <input id="lookupId" type="number" placeholder="Enter Token ID" min="1" />
+            <button id="findStar" onclick="lookupButtonClicked()">Find Star</button>
+            <div id="starInfo"></div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
